@@ -99,6 +99,10 @@ app.get('/*', function(req,res){
   
 // })
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(process.env.PORT || 8080, function(){
+  console.log('Example app listening on port ', process.env.PORT)
 })
+
+/*app.listen(8080, function () {
+  console.log('Example app listening on port 3000!')
+})*/
