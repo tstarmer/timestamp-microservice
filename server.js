@@ -4,10 +4,9 @@ var app = express();
 var moment = require('moment');
 
 app.get('/', function(req,res){
-  res.send("App is running enter a date into the address bar 4");
+  res.send("App is running, enter a date into the address bar.");
 });
 
-/*Using Moment.js*/
 app.get('/*', function(req,res){
  
   var reqTime = req.path.substr(1);//trim the /
@@ -25,11 +24,11 @@ app.get('/*', function(req,res){
     
     res.send(output);
   }else{
-    res.send("not valid")    
+    res.send(null)    
   }
   
 })
 
 app.listen(process.env.PORT || 8080, function(){
-  console.log('Example app listening on port ', process.env.PORT)
+  console.log('App listening on port ', process.env.PORT)
 })
